@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="article-shell container"><nav class="breadcrumb" aria-label="麵包屑"><a href="{{ site.baseurl }}/">首頁</a><span>/</span><a href="{{ site.baseurl }}/articles.html">文章專區</a><span>/</span><span>文章內容</span></nav>
+<article class="article-box"><div class="article-kicker">{% for cat in page.categories limit:3 %}<a href="{{ site.baseurl }}/articles.html?category={{ cat | url_encode }}" class="category">{{ cat }}</a>{% endfor %}</div>
+<h1 class="article-title">{{ page.title | escape }}</h1><p class="article-date">發布日期：{{ page.date | date: "%Y/%m/%d" }}<span class="dot">·</span> 原始 Blogger 文章</p>
+<div class="article-content">{{ content }}</div></article>
+<div class="article-bottom"><a class="btn btn-outline" href="{{ site.baseurl }}/articles.html">← 返回文章列表</a><a class="btn btn-text" href="{{ page.original_blogger_url }}" target="_blank" rel="noopener">檢視原站網址 ↗</a></div></div>

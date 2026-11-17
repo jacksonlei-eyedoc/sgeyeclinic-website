@@ -1,0 +1,6 @@
+---
+layout: default
+title: "2024 年文章彙整"
+permalink: /2024/
+---
+<div class="container listing-shell"><div class="listing-head"><span class="eyebrow">ARCHIVE / 2024</span><h1>2024 年文章</h1></div><div class="article-list">{% for post in site.posts %}{% assign year = post.url | slice: 1,4 %}{% if year == "2024" %}<article class="list-item"><div class="list-date">{{ post.date | date: "%Y.%m.%d" }}</div><div class="list-content"><h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2><p>{{ post.content | strip_html | truncate: 130 }}</p></div><span class="list-arrow">↗</span></article>{% endif %}{% endfor %}</div><div style="margin-top:24px"><a class="btn btn-outline" href="{{ site.baseurl }}/articles.html">全部文章 →</a></div></div>

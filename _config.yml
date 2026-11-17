@@ -1,0 +1,25 @@
+title: "旭明眼科診所"
+description: "醫學中心設備規格、專業醫師親切問診、便捷放鬆的診療流程、全方位的眼睛保健照護"
+lang: zh-TW
+timezone: Asia/Taipei
+url: "https://jacksonlei-eyedoc.github.io"
+baseurl: "/sgeyeclinic-website"
+preview_mode: true
+permalink: /:year/:month/:title.html
+markdown: kramdown
+highlighter: rouge
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - tools/
+  - vendor/
+  - .github/
+  - migration-report/
+  - node_modules/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
